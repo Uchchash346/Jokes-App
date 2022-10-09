@@ -1,0 +1,28 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-section{
+    padding-top: 20px;
+}
+
+.footer-text-area {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-weight: normal;
+    text-align: left;
+    letter-spacing: 1.5px;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+.footer-text-area p{
+    color: #d0ba93;
+}
+
+.arrow-icon{
+    width: 20px;
+}

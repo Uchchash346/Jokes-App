@@ -1,0 +1,138 @@
+/*========================================================================
+
+    Common CSS
+
+========================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+/*========================================================================
+
+    Header Section
+
+========================================================================*/
+.header-title {
+    font-size: 48px;
+    color: #cfb995;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+}
+
+.header-subtitle {
+    font-weight: normal;
+    font-size: 25px;
+}
+
+
+
+
+/*========================================================================
+
+    Search Bar
+
+========================================================================*/
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #fff;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    background: transparent;
+    /* outline: none; */
+    color: #b2b2b2;
+}
+
+/* .searchTerm:focus {
+    color: #00B4CC;
+} */
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #ffff;
+    background: transparent;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    width: 400px;
+    position: absolute;
+    padding-top: 40px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .search-bar {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.14);
+    display: flex;
+    align-items: center;
+    padding: 0px 48px;
+    border-radius: 10px;
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 8px 0px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+::placeholder {
+    color: #cac7ff;
+
+}
+
+.search-bar button img {
+    width: 25px;
+}
+
+.search-bar button {
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+} */
