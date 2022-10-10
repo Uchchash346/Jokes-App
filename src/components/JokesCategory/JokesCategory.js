@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './JokesCategory.css';
 import jokesData from '../../data/dummy_data';
 import arrowSign from '../../images/path-copy-4.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const colors = [
     "#ff5b5b",
     "#57e690",
@@ -20,6 +20,7 @@ const JokesCategory = () => {
     const [jokes, setJokes] = useState([]);
     const [categoryLength, setCategoryLength] = useState(7);
     const [noOfJokesCard, setNoOfJokesCard] = useState(6);
+    const navigate = useNavigate();
 
     // Fetch Jokes Category
     const fetchCategories = async () => {
@@ -49,6 +50,10 @@ const JokesCategory = () => {
     useEffect(() => {
         if (category.length > 0) fetchJokes();
     }, [category]);
+
+    const showStats = id => {
+        const url = `cate`
+    }
 
     return (
         <>
@@ -81,7 +86,7 @@ const JokesCategory = () => {
                 {jokes?.length > 0 && (
                     <div className="joke-cards">
                         {jokes.slice(0, noOfJokesCard).map((item, index) => {
-                            const { id } = item;
+                            const { id, categories, value } = item;
                             return (
                                 <div key={index} className="card-item">
                                     <div className="card-header">
@@ -89,7 +94,10 @@ const JokesCategory = () => {
                                     </div>
                                     <div className="card-text">{item.value}</div>
                                     <div className="stats">
-                                        <Link to={id} className="link-stats">
+                                        <Link to={id}
+                                            state={{ id, categories, value }}
+                                            className="link-stats"
+                                        >
                                             SEE STATS
                                         </Link><img src={arrowSign} className="arrow-right-icon" alt="" />
                                     </div>
