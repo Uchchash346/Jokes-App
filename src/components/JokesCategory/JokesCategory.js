@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './JokesCategory.css';
-import jokesData from '../../data/dummy_data';
 import arrowSign from '../../images/path-copy-4.png';
 import { Link, useNavigate } from 'react-router-dom';
 const colors = [
@@ -86,10 +85,11 @@ const JokesCategory = () => {
                     <div className="joke-cards">
                         {jokes.slice(0, noOfJokesCard).map((item, index) => {
                             const { id, categories, value } = item;
+                            console.log(categories);
                             return (
                                 <div key={index} className="card-item">
                                     <div className="card-header">
-                                        {categories} JOKE
+                                        {item.categories} JOKE
                                     </div>
                                     <div className="card-text">{item.value}</div>
                                     <div className="stats">

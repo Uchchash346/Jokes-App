@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <> 
             <div className="container footer-section">
-                <img src={footerImage} alt="" className={{ 'bottom': '0px' }} />
+                <img src={footerImage} alt=""  />
                 <div className="footer-text-area">
                     <h3>Got jokes? Get Paid <br /> For submitting</h3>
                     <p>submit joke <span><img className="arrow-icon" src={arrowIcon} alt="" /></span></p>

@@ -1,9 +1,3 @@
-/*========================================================================
-
-    Common CSS
-
-========================================================================*/
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .container {
@@ -25,12 +19,6 @@ img {
     background-repeat: no-repeat;
     width: 100%;
 }
-
-/*========================================================================
-
-    Header Section
-
-========================================================================*/
 .header-title {
     font-size: 48px;
     color: #cfb995;
@@ -48,91 +36,96 @@ img {
     font-size: 25px;
 }
 
-
-
-
-/*========================================================================
-
-    Search Bar
-
-========================================================================*/
 .search {
-    width: 100%;
-    position: relative;
     display: flex;
-}
-
-.searchTerm {
-    width: 100%;
-    border: 3px solid #fff;
-    border-right: none;
-    padding: 5px;
-    height: 20px;
-    border-radius: 5px 0 0 5px;
-    background: transparent;
-    /* outline: none; */
-    color: #b2b2b2;
-}
-
-/* .searchTerm:focus {
-    color: #00B4CC;
-} */
-
-.searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #ffff;
-    background: transparent;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-/*Resize the wrap to see the search bar change!*/
-.wrap {
-    width: 400px;
-    position: absolute;
-    padding-top: 40px;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* .search-bar {
-    width: 100%;
-    max-width: 800px;
-    background: rgba(255, 255, 255, 0.14);
-    display: flex;
+    margin-top: 60px;
+    border: 1.6px solid #fff;
+    border-radius: 4px;
     align-items: center;
-    padding: 0px 48px;
-    border-radius: 10px;
+    padding: 1px 16px;
 }
 
-.search-bar input {
-    background: transparent;
-    flex: 1;
+.search-input {
+    height: 46px;
+    width: 380px;
+    margin-right: 20px;
+    text-align: left;
+    background-color: transparent;
     border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.search-input:focus {
     outline: none;
-    padding: 8px 0px;
-    font-size: 20px;
-    color: #cac7ff;
 }
 
-::placeholder {
-    color: #cac7ff;
-
+.search-ic {
+    color: #fff;
 }
 
-.search-bar button img {
-    width: 25px;
+
+@media screen and (max-width: 1200px) {
+    .container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .centered {
+        height: auto;
+    }
+
+    .search-input {
+        height: 46px;
+        width: 380px;
+    }
 }
 
-.search-bar button {
-    border: 0;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    cursor: pointer;
-} */
+@media screen and (max-width:1024px) {
+    .container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .centered {
+        height: auto;
+    }
+
+    .search-input {
+        height: 38px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .centered {
+        height: auto;
+    }
+
+    .search-input {
+        height: 30px;
+        width: 340px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .centered {
+        height: auto;
+    }
+
+    .search-input {
+        height: 20px;
+        width: 320px;
+    }
+}

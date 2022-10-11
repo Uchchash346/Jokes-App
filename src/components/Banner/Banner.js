@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Banner.css';
 import BannerImage from '../../images/bitmap.png';
-import searchIcon from '../../images/search-copy.png';
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Banner = () => {
+    const [text, setText] = useState("");
     return (
         <>
             <div className="container">
@@ -13,13 +14,17 @@ const Banner = () => {
                     <p className="header-subtitle">Daily Laughs for Yoy and Yours</p>
                     {/* Input Search Area */}
                     <div className="wrap">
-                        <div className="search">
-                            <input type="text" className="searchTerm" placeholder="How can we make you laugh today?" />
-                            <button type="submit" className="searchButton">
-                                <img src={searchIcon} alt="" />
-                                {/* <i className="fa fa-search"></i> */}
-                            </button>
-                        </div>
+                    <div className="search">
+                    <input
+                        value={text}
+                        onChange={(e) => {
+                            setText(e.target.value);
+                        }}
+                        className="search-input"
+                        placeholder="How can we make you laugh today?"
+                    />
+                    <AiOutlineSearch className="search-ic" size={30} />
+                </div>
                     </div>
                 </div>
             </div>

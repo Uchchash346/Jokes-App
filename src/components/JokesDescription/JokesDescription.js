@@ -42,14 +42,12 @@ const JokesDescription = () => {
                                 </span>
                             </div>
                         </div>
-                        <h3 className="jokes-category-title">The {location.state.category} Joke <span>___________________________________________________________ NO #1</span></h3>
-                        <p>{location.state.value}{location.state.value}</p>
                         <div className="jokes-reaction-section">
+                            <h3 className="jokes-category-title">The {location.state.category} Joke <span>___________________________________________________________ NO #1</span></h3>
+                            <p>{location.state.value}{location.state.value}</p>
                             <div className="like-counts">
                                 <div className="like-button like-dislike-button">
-                                    {/* <button onClick={handleLikeCounter}> */}
                                     <img className="like-button-icon" src={likeIcon} alt="" />
-                                    {/* </button> */}
                                     <p className="add-counter">{counter}</p>
                                 </div>
 
@@ -64,7 +62,6 @@ const JokesDescription = () => {
                         <p className="latest-jokes-title">The top 10 jokes this week</p>
                         {
                             latestCategories && latestCategories.slice(0, topLoadingCategory).reverse().map((latestCategory, index) => {
-                                // const { id, title } = latestCategory;
                                 return (
                                     <div key={index}>
                                         <p className="jokes-list">{latestCategory} joke</p>
