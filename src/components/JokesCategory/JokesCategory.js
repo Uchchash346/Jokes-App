@@ -39,7 +39,6 @@ const JokesCategory = () => {
             `https://api.chucknorris.io/jokes/search?query=${category}`
         );
         const data = await response.json();
-        // console.log(data);
         return setJokes(data.result);
     };
 
@@ -51,9 +50,9 @@ const JokesCategory = () => {
         if (category.length > 0) fetchJokes();
     }, [category]);
 
-    const showStats = id => {
-        const url = `cate`
-    }
+    // const showStats = id => {
+    //     const url = `cate`
+    // }
 
     return (
         <>
@@ -90,7 +89,7 @@ const JokesCategory = () => {
                             return (
                                 <div key={index} className="card-item">
                                     <div className="card-header">
-                                        {category.toUpperCase()} JOKE
+                                        {categories} JOKE
                                     </div>
                                     <div className="card-text">{item.value}</div>
                                     <div className="stats">

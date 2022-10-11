@@ -5,7 +5,7 @@ import arrowIcon from '../../images/path-copy-4@2x.png';
 
 const Footer = () => {
     return (
-        <>
+        <> 
             <div className="container footer-section">
                 <img src={footerImage} alt="" className={{ 'bottom': '0px' }} />
                 <div className="footer-text-area">
